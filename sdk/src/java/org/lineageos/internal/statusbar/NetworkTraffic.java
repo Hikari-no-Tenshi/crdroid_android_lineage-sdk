@@ -215,12 +215,9 @@ public class NetworkTraffic extends TextView {
                     if (mTxKbps > mRxKbps) {
                         output = formatOutput(mTxKbps);
                         submode = MODE_UPSTREAM_ONLY;
-                    } else if (mTxKbps < mRxKbps) {
-                        output = formatOutput(mRxKbps);
-                        submode = MODE_DOWNSTREAM_ONLY;
                     } else {
                         output = formatOutput(mRxKbps);
-                        submode = MODE_UPSTREAM_AND_DOWNSTREAM;
+                        submode = MODE_DOWNSTREAM_ONLY;
                     }
                 } else if (showDownstream) {
                     output = formatOutput(mRxKbps);
